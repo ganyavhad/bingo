@@ -1,0 +1,12 @@
+<div>
+    <div class="row justify-content-center">
+        <table class="table table-bordered draw-table">
+            <tbody>
+                <tr *ngFor="let num of ticket" class="table-primary">
+                    <td [ngClass]="{'h-col-selected': n.status=='Closed','h-col-empty':n.status == 'Open'}"
+                        *ngFor="let n of num">{{n}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
